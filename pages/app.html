@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyxnote - Aplicativo de Estudos</title>
+
+    <link rel="stylesheet" href="/assets/css/app.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="shortcut icon" href="/assets/image/mascote.PNG" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+       <div class="logo-container">
+    <img src="/assets/image/logo.png" alt="Logo Nyxnote" width="255">
+</div>
+
+        <div>
+            <nav class="menu">
+                <button class="botaomenu">
+                    <a href="#"><i class="fa-solid fa-clock" id="abrirModal"></i></a>
+                </button>
+
+                <button class="botaomenu">
+                    <a href="#"><i class="fa-solid fa-list" id="abrirmodalnotes"></i></a>
+                </button>
+
+                <button class="botaomenu">
+                    <a href="#"><i class="fa-solid fa-gear" id="abrirModal2"></i></a>
+                </button>
+
+                <button class="botaomenu">
+                    <a href="#"><i class="fa-solid fa-circle-info" id="abrirModal3"></i></a>
+                </button>
+
+                <button class="botaomenu">
+                    <a href="index.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cronograma">
+            <h4>𝜗ৎCRONOGRAMA𝜗ৎ</h4>
+
+            <section class="tabelacronograma">
+                <table id="tabelacronograma">
+                    <thead></thead>
+                    <tbody id="corpoTabelaCronograma"></tbody>
+                </table>
+            </section>
+
+            <button class="botaoformulario" id="abrirmodalforms">Formulário</button>
+        </section>
+
+        <section class="calendarioconteudo">
+            <div class="calendario">
+                <h4>𝜗ৎCALENDÁRIO𝜗ৎ</h4>
+
+                <div class="calendario-header">
+                    <button id="prevMonth" class="calendario-nav-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <h3 id="currentMonthYear"></h3>
+
+                    <button id="nextMonth" class="calendario-nav-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="calendario-body">
+                    <div class="dias-semana">
+                        <span>Dom</span><span>Seg</span><span>Ter</span>
+                        <span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+                    </div>
+
+                    <div class="dias-do-mes" id="diasDoMes"></div>
+                </div>
+
+                <div class="calendario-footer">
+                    <input type="date" id="data" name="data"><br>
+                    <input class="nomeevento" type="text" id="nomeEventoInput" placeholder="Nome do evento"><br><br>
+                    <button class="botaoformulario" id="criarEvento">Adicionar evento no Calendário</button>
+                    <div id="eventosDoDia" class="eventos-do-dia"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nyxnote. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="modalpomodoro" class="modal">
+        <div class="modalcontent">
+            <span class="fechar" id="fecharModal">&times;</span>
+            <div id="timer">25:00</div>
+            <div class="controles">
+                <button id="starttimer">Iniciar</button>
+                <button id="pausetimer" disabled>Pausar</button>
+                <button id="resettimer">Reiniciar</button>
+            </div>
+            <p id="status">Pronto para Iniciar</p>
+        </div>
+    </div>
+
+    <div id="modalconfig" class="modal">
+        <div class="modalcontent">
+            <span class="fechar" id="fecharModal2">&times;</span>
+            <h2>Configurações</h2>
+            <div class="form-group">
+                <label for="themeSelect">Tema do App:</label>
+                <select id="themeSelect" aria-label="Selecionar tema do app">
+                    <option value="light">Claro</option>
+                    <option value="dark">Escuro</option>
+                </select>
+            </div>
+            <p id="languageChangeMsg" class="sucessomensagem"></p>
+        </div>
+    </div>
+
+    <div id="modalsobre" class="modal">
+        <div class="modalcontent">
+            <span class="fechar" id="fecharModal3">&times;</span>
+            <p>Nyxnote é um aplicativo de estudos feito com carinho para ajudar você a se organizar, manter o foco e transformar sua rotina.</p>
+            <p>Mais do que um app, é um companheiro de jornada. 🌙✨</p>
+            <center>
+                <img src="/assets/image/mascote.PNG" alt="Logo" width="75" height="75">
+            </center>
+        </div>
+    </div>
+
+    <div id="modalForms" class="modal">
+        <div class="modalcontentforms">
+            <span class="fechar" id="fecharmodalforms">&times;</span>
+            <form id="form-cronograma">
+                <label id="horas">Horas por dia disponíveis:</label>
+                <input type="number" id="horas-dia" min="1" max="24" required>
+
+                <div class="materias-container">
+                    <div class="materia-item">
+                        <input type="text" name="nomeMateria" placeholder="Nome da Matéria" required>
+                        <select name="prioridade">
+                            <option value="alta">Alta</option>
+                            <option value="media">Média</option>
+                            <option value="baixa">Baixa</option>
+                        </select>
+                        <input type="color" name="cor" value="#ac69f5">
+                    </div>
+                </div>
+
+                <button type="button" id="addMateria">Adicionar Matéria</button><br>
+                <button class="botaoformulario" type="submit">Gerar Cronograma</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalnotes" class="modal">
+        <div class="modalcontentnotes">
+            <span class="fechar" id="fecharmodalnotes">&times;</span>
+            <h3 style="text-align: center;"><i class="fa-solid fa-pen"></i> Quadro de Anotações</h3>
+
+            <div id="quadrokanban" class="quadrokanban">
+                <div class="coluna" data-status="afazer">
+                    <h4> A Fazer</h4>
+                    <div class="card-container" id="afazer"></div>
+                    <input type="text" placeholder="Nova tarefa..." class="input-tarefa">
+                    <button class="btn-add" id="add-afazer-btn">Adicionar</button>
+                </div>
+
+                <div class="coluna" data-status="progresso">
+                    <h4> Em Progresso</h4>
+                    <div class="card-container" id="progresso"></div>
+                </div>
+
+                <div class="coluna" data-status="concluido">
+                    <h4> Concluído</h4>
+                    <div class="card-container" id="concluido"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/assets/js/app.js"></script>
+
+
+
+</body>
+</html>

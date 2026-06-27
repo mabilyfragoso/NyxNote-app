@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Configuração básica do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyxNote - Login</title>
+
+    <!-- CSS personalizado para o login -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+
+    <!-- Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Ícone do site -->
+    <link rel="shortcut icon" href="/assets/image/mascote.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!-- Cabeçalho vazio (poderia ter uma logo, menu, etc.) -->
+    </header>
+
+    <!-- Logo centralizada -->
+    <center>
+        <img src="/assets/image/logo.png" alt="NyxNote Logo" width="300px">
+    </center>
+
+    <!-- Container principal do formulário -->
+    <main class="container">
+        <div class="formbox">
+            <h2>Login</h2>
+
+            <!-- Botões de alternância entre login e cadastro -->
+            <div class="buttonform">
+                <button id="loginbutton" class="buttonativo" onclick="mostrarform('login')">Login</button>
+                <button id="criarbutton" class="buttoncriar" onclick="mostrarform('criarconta')">Criar conta</button>
+            </div>
+
+            <!-- Formulário de login -->
+            <form id="loginform">
+                <input type="email" placeholder="Email" id="loginEmail" name="loginEmail">
+
+                <div class="password">
+                    <input type="password" placeholder="Senha" id="loginPassword" name="loginPassword">
+                    <!-- Ícone para mostrar/ocultar senha -->
+                    <i class="fas fa-eye toggle-password" data-target="loginPassword"></i>
+                </div>
+
+                <!-- Link para redefinir senha -->
+                <p class="esqueceusenha"><a href="#" id="abrir">Esqueceu a senha?</a></p>
+
+                <button type="submit" class="submitloginbutton">Login</button>
+
+                <!-- Link para ir ao cadastro (mostrado se estiver no login) -->
+                <p class="toggle-form-link" id="linkToSignup"><a href="#">Não é um usuário? Cadastre-se agora</a></p>
+            </form>
+
+            <!-- Formulário de cadastro -->
+            <form id="cadastroform">
+                <input type="text" placeholder="Username" id="cadastroNome" name="cadastroNome" required>
+                <input type="email" placeholder="Email" id="cadastroEmail" name="cadastroEmail" required>
+
+                <div class="password">
+                    <input type="password" placeholder="Senha" id="cadastroSenha" name="cadastroSenha" required>
+                    <!-- Ícone para mostrar/ocultar senha -->
+                    <i class="fas fa-eye toggle-password" data-target="cadastroSenha"></i>
+                </div>
+
+                <button type="submit" class="submitcadastro">Cadastrar</button>
+
+                <!-- Link para voltar ao login (mostrado se estiver no cadastro) -->
+                <p class="toggle-form-link" id="linkToLogin"><a href="#">Já é um usuário? Entrar</a></p>
+            </form>
+
+            <!-- Caixa de mensagens para login e cadastro -->
+            <div id="messageBox"
+                style="display: none; padding: 10px; margin-top: 15px; border-radius: 8px; text-align: center;"></div>
+
+            <div id="cadastroMessageBox"
+                style="display: none; padding: 10px; margin-top: 15px; border-radius: 8px; text-align: center;"></div>
+        </div>
+    </main>
+
+    <!-- Modal para redefinir senha -->
+    <div id="esqueceusenhamodal" class="modal">
+        <div class="modalcontent">
+            <span class="fechar" id="fecharesqueceusenhamodal">&times;</span>
+            <h2>Redefinir Senha</h2>
+
+            <form id="esqueceusenhaForm">
+                <input type="email" placeholder="Seu e-mail cadastrado" id="resetEmail" required>
+                <button type="submit" class="submitloginbutton">Enviar link de redefinição</button>
+            </form>
+
+            <div id="esqueceusenhabox"></div>
+        </div>
+    </div>
+
+    <!-- Scripts principais -->
+    <script type="module" src="/assets/js/login.js"></script>
+ 
+</body>
+</html>
