@@ -6,6 +6,9 @@
 O **NyxNote** é uma plataforma desenvolvida para ajudar estudantes a planejarem sua rotina de estudos de forma inteligente e personalizada. A aplicação reúne ferramentas essenciais para aumentar a produtividade, como gerenciamento de tarefas, cronograma automático, calendário interativo e a técnica Pomodoro, proporcionando uma experiência prática, organizada e intuitiva.
 
 
+> **Projeto acadêmico desenvolvido na disciplina de Desenvolvimento Web**, com foco na aplicação de conceitos de HTML, CSS, JavaScript e integração com Supabase.
+
+
 
 ## 🚧 Status do Projeto
 
