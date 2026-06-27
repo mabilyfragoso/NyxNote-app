@@ -1,55 +1,95 @@
-Nyxnote é uma plataforma web voltada para a organização e motivação de estudantes. Com recursos como cronograma de estudos automático, método Pomodoro, calendário interativo e gerenciamento de tarefas, o projeto oferece uma experiência prática e personalizada para o aprendizado.
 
-Objetivos
+# 📚 NyxNote 
 
--Promover a organização personalizada dos estudos.
--Integrar métodos inteligentes de estudo, como a técnica Pomodoro.
--Criar uma experiência intuitiva e envolvente para estudantes.
+> Uma plataforma web para organização e produtividade nos estudos.
 
-Funcionalidades
+O **NyxNote** é uma plataforma desenvolvida para ajudar estudantes a planejarem sua rotina de estudos de forma inteligente e personalizada. A aplicação reúne ferramentas essenciais para aumentar a produtividade, como gerenciamento de tarefas, cronograma automático, calendário interativo e a técnica Pomodoro, proporcionando uma experiência prática, organizada e intuitiva.
 
--Login e Cadastro de Usuários
--Gerenciamento de Tarefas
--Cronograma de Estudos Automático
--Calendário Interativo para Eventos
--Temporizador com Técnica Pomodoro
--Modo Claro/Escuro
--Informações sobre o App e Logout
+## 🚧 Status do Projeto > **Em desenvolvimento** O **NyxNote** está em constante desenvolvimento e continuará recebendo novas funcionalidades, melhorias de desempenho, correções de bugs e aprimoramentos na experiência do usuário. Não há um cronograma definido para essas atualizações, pois o projeto evolui de acordo com o desenvolvimento e a disponibilidade dos colaboradores. 
 
-Tecnologias Utilizadas
+## 🎯 Objetivos
 
-Front-end
+- 📖 Promover uma organização personalizada dos estudos.
+- ⏳ Integrar métodos de produtividade, como a Técnica Pomodoro.
+- 🚀 Oferecer uma experiência moderna, intuitiva e responsiva.
+- 🎓 Auxiliar estudantes no planejamento e acompanhamento da rotina acadêmica.
 
--HTML5 — Estrutura do conteúdo
--CSS3 — Estilização e layout
--JavaScript — Lógica e interatividade
-Back-end e Banco de Dados
--JavaScript 
--Supabase — Autenticação, banco de dados e API REST
 
-Fluxo de Navegação
 
--Login: Acesso ao sistema com e-mail e senha.
--Quadro de Tarefas: Visualização e gestão de tarefas (pode ser ocultado).
--Calendário: Inserção e visualização de eventos.
--Cronograma: Inserção de matérias, tempo de estudo, cores e prioridade → cronograma gerado automaticamente.
--Pomodoro: Temporizador para sessões de foco com pausas.
--Tema Visual: Alternância entre modo claro e escuro.
--Informações: Aba com descrição do app.
--Logout: Encerramento de sessão.
+## ✨ Funcionalidades
 
-Interface
+- 🔐 Login e cadastro de usuários
+- ✅ Gerenciamento de tarefas
+- 📅 Calendário interativo para eventos
+- 📚 Cronograma de estudos automático
+- 🍅 Temporizador com Técnica Pomodoro
+- 🌙 Modo claro e escuro
+- ℹ️ Informações sobre o aplicativo
+- 🚪 Logout
 
--Ícones intuitivos para navegação (tarefas, calendário, pomodoro, configurações).
--Layout limpo e responsivo.
--Suporte ao modo escuro para conforto visual.
 
-Melhorias Futuras
+## 🛠️ Tecnologias Utilizadas
 
--Gamificação com pontos e conquistas.
--Versão mobile do app.
--Área social para compartilhamento de rotinas e dicas entre usuários.
+### Front-end
 
-Conclusão
-O Nyxnote é mais do que uma ferramenta de estudo — é um aliado no desenvolvimento acadêmico, oferecendo uma experiência moderna, organizada e motivadora. A plataforma tem potencial para crescer com novas funcionalidades e impactar positivamente a vida dos estudantes.
+- HTML5
+- CSS3
+- JavaScript
+
+### Back-end
+
+- JavaScript
+
+### Banco de Dados
+
+- Supabase
+  - Autenticação
+  - Banco de dados
+  - API REST
+
+
+
+### Cronograma
+
+1. Adicione as matérias.
+2. Defina o tempo de estudo.
+3. Escolha uma prioridade.
+4. Selecione uma cor.
+5. O NyxNote gera automaticamente um cronograma personalizado.
+
+
+
+## 🎨 Interface
+
+✔️ Layout moderno e responsivo
+
+✔️ Navegação simples por ícones
+
+✔️ Modo Claro e Escuro
+
+✔️ Experiência focada na produtividade
+
+
+## 📈 Melhorias Futuras
+
+* 🎮 Sistema de gamificação
+* 👥 Área social entre estudantes
+* 📊 Dashboard de desempenho
+* 🔔 Sistema de notificações
+* ☁️ Sincronização em tempo real
+*     Entre outros
+
+
+
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+
+
+## 👨‍💻 Desenvolvedor
+
+Desenvolvido por Amabile M. Fragoso.
+
 
